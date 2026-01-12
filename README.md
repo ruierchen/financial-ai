@@ -27,6 +27,22 @@ LangChain → OpenAI
 Pandas + Matplotlib
 ```
 ---
+## Deployment
+
+The backend is implemented with **FastAPI** and supports multiple deployment strategies:
+
+- **AWS Lambda + API Gateway** using **Mangum** for serverless execution
+- **AWS EC2** using **Uvicorn** for long-running and compute-intensive workloads
+
+The same codebase is used for both deployment options without modification to business logic.
+
+### AWS EC2 (Uvicorn)
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn app:app --host 0.0.0.0 --port 8000
+---
 
 ## ⚙️ Running Locally
 
