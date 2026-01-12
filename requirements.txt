@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+mangum
+pandas
+matplotlib
+openpyxl
+python-dotenv
+langchain
+langchain-openai
