@@ -17,6 +17,7 @@ A AI-powered financial analytics chatbot that lets users query company financial
 ---
 
 ## 🧠 Architecture
+```text
 React (Vercel)
 ↓
 FastAPI (EC2 / Lambda)
@@ -24,13 +25,13 @@ FastAPI (EC2 / Lambda)
 LangChain → OpenAI
 ↓
 Pandas + Matplotlib
-
+```
 ---
 
 ## ⚙️ Running Locally
 
 ### Backend
-
+```bash
 cd backend
 cp .env.example .env
 pip install -r requirements.txt
@@ -38,11 +39,11 @@ uvicorn app:app --reload
 
 cd frontend
 npm install
-
+```
 ---
 
 ## 🛠 Troubleshooting
-
+```text
 “No data uploaded”
 
 You must upload file first via UI or /upload.
@@ -58,10 +59,11 @@ Make sure:
 	•	backend/.env exists
 	•	OPENAI_API_KEY is set
 	•	you started backend from backend/ directory (so env loads correctly if you add dotenv later)
-
+```
 ---
 
 ## 🚧 Future Improvements
+```text
 Persist uploaded data:
 	•	store in S3 + DynamoDB/Postgres
 User sessions / multi-tenant:
@@ -70,3 +72,4 @@ Caching:
 	•	cache parsed queries & computed results
 Observability:
 	•	structured logging, tracing, metrics
+```
